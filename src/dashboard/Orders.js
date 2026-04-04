@@ -40,12 +40,12 @@ const Orders = () => {
   };
 
   // =========================
-  // 🔥 REAL TRADING FUNCTION
+  // 🔥 PLACE ORDER FUNCTION
   // =========================
   const placeOrder = async (name, qty, price, mode) => {
     const total = qty * price;
 
-    // 1️⃣ GET FUNDS
+    // GET FUNDS
     const { data: fundsData, error: fundErr } = await supabase
       .from("funds")
       .select("*")
@@ -68,7 +68,6 @@ const Orders = () => {
         return;
       }
 
-      // deduct money
       await supabase
         .from("funds")
         .update({
@@ -76,7 +75,6 @@ const Orders = () => {
         })
         .eq("id", fundsData.id);
 
-      // check holdings
       const { data: existing } = await supabase
         .from("holdings")
         .select("*")
@@ -118,7 +116,6 @@ const Orders = () => {
         return;
       }
 
-      // reduce holding
       await supabase
         .from("holdings")
         .update({
@@ -126,7 +123,6 @@ const Orders = () => {
         })
         .eq("id", existing.id);
 
-      // add money
       await supabase
         .from("funds")
         .update({
@@ -169,13 +165,14 @@ const Orders = () => {
               <th>Price</th>
               <th>Mode</th>
               <th>Total Value</th>
+              <th>Actions</th>
             </tr>
           </thead>
 
           <tbody>
             {allOrders.length === 0 ? (
               <tr>
-                <td colSpan="5" style={{ textAlign: "center", padding: "20px" }}>
+                <td colSpan="6" style={{ textAlign: "center", padding: "20px" }}>
                   You haven't placed any orders today
                 </td>
               </tr>
@@ -187,7 +184,6 @@ const Orders = () => {
                   <tr key={index}>
                     <td>{order.name}</td>
                     <td>{order.qty}</td>
-
                     <td>{Number(order.price).toFixed(2)}</td>
 
                     <td
@@ -200,6 +196,25 @@ const Orders = () => {
                     </td>
 
                     <td>{totalValue.toFixed(2)}</td>
+
+                    {/* ACTION BUTTONS */}
+                    <td>
+                      <button
+                        onClick={() =>
+                          placeOrder(order.name, order.qty, order.price, "BUY")
+                        }
+                      >
+                        Buy Again
+                      </button>
+
+                      <button
+                        onClick={() =>
+                          placeOrder(order.name, order.qty, order.price, "SELL")
+                        }
+                      >
+                        Sell
+                      </button>
+                    </td>
                   </tr>
                 );
               })
@@ -216,16 +231,12 @@ const Orders = () => {
         </div>
 
         <div className="col">
-          <h5>
-            {allOrders.filter((o) => o.mode === "BUY").length}
-          </h5>
+          <h5>{allOrders.filter((o) => o.mode === "BUY").length}</h5>
           <p>Buy Orders</p>
         </div>
 
         <div className="col">
-          <h5>
-            {allOrders.filter((o) => o.mode === "SELL").length}
-          </h5>
+          <h5>{allOrders.filter((o) => o.mode === "SELL").length}</h5>
           <p>Sell Orders</p>
         </div>
       </div>

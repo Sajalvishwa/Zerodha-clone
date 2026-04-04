@@ -13,7 +13,7 @@ function Education() {
             Varsity, the largest online stock market education book in the world
             covering everything from the basics to advanced trading.
           </p>
-          <a href="" style={{ textDecoration: "none" }}>
+          <a href="#" style={{ textDecoration: "none" }}>
             Versity <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
           </a>
           <p className="mt-5">
