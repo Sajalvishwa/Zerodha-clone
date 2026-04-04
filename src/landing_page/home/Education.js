@@ -20,7 +20,7 @@ function Education() {
             TradingQ&A, the most active trading and investment community in
             India for all your market related queries.
           </p>
-          <a href="" style={{ textDecoration: "none" }}>
+          <a href="#" style={{ textDecoration: "none" }}>
             TradingQ&A <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
