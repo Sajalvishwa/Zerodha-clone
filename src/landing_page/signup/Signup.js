@@ -48,7 +48,7 @@ function Signup() {
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: "https://sajalzerodhaclone.netlify.app/dashboard",
+          emailRedirectTo: "https://zerodha-clone-gamma-liard.vercel.app/dashboard",
         },
       });
 
