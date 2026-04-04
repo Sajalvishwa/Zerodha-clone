@@ -48,7 +48,7 @@ function Signup() {
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: "http://localhost:3000/dashboard",
+          emailRedirectTo: "https://sajalzerodhaclone.netlify.app/dashboard",
         },
       });
 
