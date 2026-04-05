@@ -1,74 +1,74 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Zerodha Clone
 
-## Available Scripts
+A modern Zerodha-inspired stock trading platform UI built using React and Supabase.
+This project replicates core features like authentication, dashboard, and order management.
 
-In the project directory, you can run:
+🌐 Live Demo
 
-### `npm start`
+🔗 https://zerodha-clone-gamma-liard.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📌 Features
+🔐 Email OTP Authentication (Supabase)
+📊 Dashboard UI (Zerodha-inspired)
+📈 Orders & Holdings Section
+⚡ Real-time updates (Supabase Realtime)
+🎯 Clean and responsive UI
+🚀 Deployed on Vercel
+🛠️ Tech Stack
+Frontend: React.js
+Backend: Supabase
+Database: PostgreSQL (via Supabase)
+Routing: React Router
+Hosting: Vercel
+📂 Project Structure
+frontend/
+│── src/
+│   ├── dashboard/
+│   ├── landing_page/
+│   ├── scripts/
+│   ├── components/
+│   └── App.js
+│
+└── public/
+⚙️ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/Sajalvishwa/zerodha-clone.git
+cd zerodha-clone
+2️⃣ Install dependencies
+npm install
+3️⃣ Setup environment variables
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a .env file:
 
-### `npm test`
+REACT_APP_SUPABASE_URL=your_url
+REACT_APP_SUPABASE_ANON_KEY=your_key
+4️⃣ Run the project
+npm start
+🔑 Authentication Flow
+User enters email
+OTP / Magic link sent via Supabase
+After verification → redirected to dashboard
+🚧 Known Issues
+OTP expiration issue (can happen if link delay)
+Session mismatch due to device time skew
+📸 Screenshots (Optional)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Add your UI screenshots here
 
-### `npm run build`
+🤝 Contributing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributions are welcome!
+Feel free to fork and submit a PR.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📄 License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is for educational purposes only.
 
-### `npm run eject`
+💡 Author
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Sajal Vishwakarma
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+⭐ Support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Zerodha-clone
->>>>>>> 3b28a4be8da438c3d31c6bbb5e1e357ca7100742
+If you like this project, give it a ⭐ on GitHub!
