@@ -2,7 +2,7 @@ import React from "react";
 
 function Universe() {
   const items = [
-    { img: "media/zerodhaFundhouse.png" },
+    { img: "media/Smart Growth Network TexhFundhouse.png" },
     { img: "media/sensibullLogo.svg" },
     { img: "media/smallcaseLogo.png" },
     { img: "media/streakLogo.png" },
@@ -15,7 +15,7 @@ function Universe() {
       
       {/* Heading Section */}
       <div className="text-center mb-5">
-        <h1 className="fw-bold">The Zerodha Universe</h1>
+        <h1 className="fw-bold">The Smart Growth Network Texh Universe</h1>
         <p className="text-muted mx-auto" style={{ maxWidth: "600px" }}>
           Extend your trading and investment experience even further with our partner platforms
         </p>
