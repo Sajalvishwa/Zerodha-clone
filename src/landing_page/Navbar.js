@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg border-bottom bg-white py-3">
+    <nav className="navbar navbar-expand-lg bg-white border-bottom shadow-sm py-2">
       <div className="container">
 
         {/* Logo */}
-        <Link className="navbar-brand"  to="/" >
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="media/logo.svg"
-            alt="Logo"
-            style={{ width: "150px" }}
+            src="/media/lo.png"
+            alt="Smart Growth Network Tech"
+            style={{
+              height: "50px",
+              width: "",
+              objectFit: "contain",
+              transition: "transform 0.2s ease"
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           />
         </Link>
 
@@ -26,27 +33,40 @@ function Navbar() {
         </button>
 
         {/* Right Menu */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul className="navbar-nav align-items-center gap-4">
 
             <li className="nav-item">
-              <Link className="nav-link fs-5 text-dark" to="/signup">Signup</Link>
+              <Link className="nav-link fs-6 fw-semibold text-dark" to="/signup">
+                Signup
+              </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link fs-5 text-dark" to="/about">About</Link>
+              <Link className="nav-link fs-6 fw-semibold text-dark" to="/about">
+                About
+              </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link fs-5 text-dark" to="/products">Products</Link>
+              <Link className="nav-link fs-6 fw-semibold text-dark" to="/products">
+                Products
+              </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link fs-5 text-dark" to="/pricing">Pricing</Link>
+              <Link className="nav-link fs-6 fw-semibold text-dark" to="/pricing">
+                Pricing
+              </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link fs-5 text-dark" to="/support">Support</Link>
+              <Link className="nav-link fs-6 fw-semibold text-dark" to="/support">
+                Support
+              </Link>
             </li>
 
           </ul>

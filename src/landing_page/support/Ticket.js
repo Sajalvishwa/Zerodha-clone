@@ -15,7 +15,7 @@ function Ticket() {
       ],
     },
     {
-      title: "Your Zerodha Account",
+      title: "Your Smart Growth Network Texh Account",
       items: [
         "Your Profile",
         "Account modification",
