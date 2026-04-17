@@ -1,5 +1,5 @@
 
-🚀 Zerodha Clone
+🚀 Smart Growth Network Tech
 
 A modern Zerodha-inspired stock trading platform UI built using React and Supabase.
 This project replicates core features like authentication, dashboard, and order management.
